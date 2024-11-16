@@ -1,0 +1,460 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    /*display: flex;*/
+/*    justify-content: center;
+    align-items: center;*/
+    height: 100vh;
+    margin: 0;
+}
+
+.deal-section {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.deal-header {
+    display: flex;
+    justify-content: flex-start; /* Căn bên trái */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.deal-title {
+    text-decoration: underline;
+    font-size: 24px;
+    margin-right: 10px; /* Khoảng cách giữa tiêu đề và dấu "/" */
+}
+
+.countdown {
+    font-size: 18px;
+    color: red;
+    margin-left: 10px; /* Khoảng cách giữa dấu "/" và thời gian */
+}
+
+.view-all {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #007bff;
+    margin-left: auto; /* Đẩy sang bên phải */
+
+}
+
+.product-list-container {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+ 
+}
+
+.product-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.product {
+    min-width: 20%; /* 5 sản phẩm trên 1 dòng */
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
+}
+/*
+.best-choice {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: orange;
+    color: black;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}*/
+
+.product img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.2em;
+}
+
+.product-rating {
+    font-size: 12px;
+    color: #777;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #888;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount-price {
+    font-size: 16px;
+    color: red;
+}
+
+.discount-percent {
+    font-size: 12px;
+    background-color: #e7e7e7;
+    padding: 3px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+
+.stock-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prev-btn {
+    left: 0;
+}
+
+#next-btn {
+    right: 0;
+}
+/*margin { 0;
+font-family: Arial, sans-serif;
+}*/
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide-container {
+    min-width: 25%; /* Mỗi ảnh chiếm 1/4 không gian container */
+    height: 150px;
+    object-fit: cover; /* Giữ nguyên tỷ lệ ảnh */
+    transition: opacity 1s ease;
+}
+
+button.prev-slider, button.next-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  /*  border-radius: 50%;*/
+}
+
+button.prev-slider {
+    left: 10px;
+}
+
+button.next-slider {
+    right: 10px;
+}
+
+button .prev-slider, button .next-slider:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*PC nổi bật*/
+
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}*/
+
+.pc-noi-bat-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-pc-noi-bat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .header-pc-noi-bat h2 {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #002f6c;
+    }
+
+.view-all-noibnat {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.banner-pc, .product {
+    flex: 1;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+    .banner-pc img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .product h3 {
+        font-size: 14px;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+.rating {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sale-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e63946;
+    margin-top: 5px;
+}
+
+.discount-percentage {
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid red;
+}
+
+.best-choice {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: greenyellow;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    z-index: 1;
+}
+
+.best-seller {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: orange;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    z-index: 1;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Tạo khoảng cách đều giữa hai mục lớn */
+    margin: 0 auto; /* Canh giữa container */
+    width: 80%; /* Giảm kích thước container để tạo khoảng trống bên trái và bên phải */
+}
+
+.section {
+    width: 48%; /* Giữ kích thước mục lớn là 48% */
+    background-color: white;
+    padding: 20px; /* Giữ padding để mục nhỏ gọn hơn */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Giữ độ bóng của mục */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Giảm khoảng cách giữa tiêu đề và nội dung */
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 26px;
+    margin-bottom: 10px; /* Giảm khoảng cách dưới chữ "TNC CHANNEL" */
+    text-decoration: underline;
+    text-decoration-color: #007bff; /* Màu gạch chân xanh dương */
+    text-underline-position: under; /* Đặt gạch chân ở dưới chữ */
+}
+
+.view-all {
+    font-size: 16px; /* Giữ kích thước chữ của "Xem tất cả" */
+    color: #007bff;
+    text-decoration: none;
+}
+
+.view-all:hover {
+        text-decoration: underline;
+}
+.img-channel{
+    width:100px;
+    height:50px;
+}
+.img-tintuc{
+    width:100px;
+    height:50px;
+}
+
+
+
+
+.container-thuonghieu {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-thuonghieu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .header-thuonghieu h2 {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #002f6c;
+    }
+
+.slider-container-thuonghieu {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.slider-thuonghieu {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item-thuonghieu {
+    flex: 1 0 12.5%; /* Chiều rộng 12.5% cho 8 logo */
+    text-align: center;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+    .slider-item-thuonghieu img {
+        width: 60%; /* Giảm kích thước hình ảnh để vừa hơn */
+        height: auto;
+        object-fit: contain; /* Điều chỉnh logo để vừa vặn */
+        margin-bottom: 10px;
+    }
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-control-left, .slider-control-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
